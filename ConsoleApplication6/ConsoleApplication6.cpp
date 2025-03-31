@@ -9,12 +9,21 @@ Requirements: Create a program that calculates the number of miles per gallon a 
 
 int main() {
 
-	double gallonsOfGas = 15.0;
-	double MilesDriven = 375.0;
+	double gallonsOfGas, MilesDriven, mpg;
 
-	double mpg = MilesDriven / gallonsOfGas;
+	std::cout << "Enter the number of gallons of gas used: ";
+	std::cin >> gallonsOfGas;
 
-	std::cout << "The car gets " << mpg << " miles per gallon." << std::endl;
+	std::cout << "Enter the number of miles driven: ";
+	std::cin >> MilesDriven;
+
+	if (gallonsOfGas <= 0) {
+		std::cout << "Error: Gallons of Gas must be greater than 0." << std::endl;
+	} else {
+		mpg = MilesDriven / gallonsOfGas;
+
+		std::cout << "The car gets " << mpg << " miles per gallon." << std::endl;
+	}
 
 	return 0;
 }
