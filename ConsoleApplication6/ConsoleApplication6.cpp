@@ -1,20 +1,22 @@
 /* File Name: Chapter 2 Assignment
 Programmer/Name: Christopher Wilson
-Date: 3/26/2025
+Date: 3/27/2025
 
-Requirements: Create a program that calculates the number of miles per gallon a car can get with 15 gallons of gasoline then display the results.
+Requirements: Create a program that stores 5 different values in different variables, calculate the sum of the 5 values, store the result in a separate variable then divide by 5 to get the average then display the Average on screen.
 */
 
 #include <iostream>
+#include <iomanip>
 
 int main() {
+	int num1 = 28, num2 = 32, num3 = 37, num4 = 24, num5 = 33;
 
-	double gallonsOfGas = 15.0;
-	double MilesDriven = 375.0;
+	int sum = num1 + num2 + num3 + num4 + num5;
 
-	double mpg = MilesDriven / gallonsOfGas;
+	double average = sum / 5.0;
 
-	std::cout << "The car gets " << mpg << " miles per gallon." << std::endl;
+	std::cout << std::fixed << std::setprecision(2);
+	std::cout << "The average of the five numbers given is: " << average << std::endl;
 
 	return 0;
 }
