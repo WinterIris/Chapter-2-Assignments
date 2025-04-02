@@ -1,20 +1,26 @@
 /* File Name: Chapter 2 Assignment
 Programmer/Name: Christopher Wilson
-Date: 3/26/2025
+Date: 3/27/2025
 
-Requirements: Create a program that calculates the number of miles per gallon a car can get with 15 gallons of gasoline then display the results.
+Requirements: Create a program that displays ocean levels at 5 years, 7 years then 10 years
 */
 
 #include <iostream>
+#include <iomanip>
 
 int main() {
 
-	double gallonsOfGas = 15.0;
-	double MilesDriven = 375.0;
+	const double riseRate = 1.5;
 
-	double mpg = MilesDriven / gallonsOfGas;
+	double riseAfter5Years = 5 * riseRate;
+	double riseAfter7Years = 7 * riseRate;
+	double riseAfter10Years = 10 * riseRate;
 
-	std::cout << "The car gets " << mpg << " miles per gallon." << std::endl;
+	std::cout << std::fixed << std::setprecision(2);
+	std::cout << "The estimated ocean level rise: \n";
+	std::cout << "After 5 years, it will be: " << riseAfter5Years << " mm\n";
+	std::cout << "After 7 years, it will be: " << riseAfter7Years << " mm\n";
+	std::cout << "After 10 years, it will be: " << riseAfter10Years << " mm\n";
 
 	return 0;
 }
